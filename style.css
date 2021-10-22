@@ -40,6 +40,64 @@ img{
     text-decoration:none;
 }
 .main-header-input{
-    display:block;
+    display: block;
     padding: 10px 20px;
 }
+/*section- slider*/
+.container-slider{
+ margin: 50px 0;
+ padding: 10px;   
+ overflow: hidden;
+ /* 
+ codigo para otro slider  
+width: 90%;
+max-width: 900px;
+margin: auto;
+overflow: hidden; /* hace que las imágenes se pongan una sobre otra*/
+/*box-shadow: 0 0 0 10px #fff, 
+            0 15px 50px;
+position: relative; /*borde*/*/
+
+}
+.slider{
+display: flex;
+width: 400%; /*100 por cada imagen 500 por 5 imagenes*/
+height: 300px; /* Era 400*/
+margin-left: -100%;/* se agrego*/
+}
+.slider-section{
+width:100%;
+}
+.section-img{
+display:block;
+width: 100%;
+height:100%;
+object-fit: cover; /*permite que las imagenes no se distorcionen*/
+}
+.slider-btn{
+position: absolute;
+width:  40px;
+height: 40px;
+background: rgba(255, 255, 255, 0.7);
+top:50%;
+transform: translatev(-50%);
+font-size: 30px;
+font-weight: bold;
+font-family: monospace;
+text-align: center;
+border-radius: 50%;
+cursor: pointer;
+}
+.slider-btn:hover{
+    background: #fff;
+
+}
+.slider-btn-right{
+    right: 10px;
+
+}
+.slider-btn-left{
+    left: 10px;
+
+}
+/*end slider*/
