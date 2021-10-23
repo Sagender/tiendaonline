@@ -1,8 +1,17 @@
+@font-face {
+    font-family: "Inconsolata-Bold";
+    src: url(../fonts/Inconsolata-Bold.ttf);
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../fonts/Poppins-Bold.ttf);
+}
 *{
     box-sizing:borde-box;
 }
 body{
     margin:0;
+    font-family: "Inconsolata-Bold";
 }
 img{
     display: block;
@@ -15,6 +24,7 @@ img{
     text-align: center;
     font-size: 2.5em;
     margin: 10px 0;
+    font-family: "Poppins-bold";
 }
 .main-nav{
     display: none;
@@ -43,6 +53,10 @@ img{
     display: block;
     padding: 10px 20px;
 }
+.main {
+    padding: 20px;
+
+}
 /*section- slider*/
 .container-slider{
  margin: 50px 0;
@@ -64,9 +78,21 @@ display: flex;
 width: 400%; /*100 por cada imagen 500 por 5 imagenes*/
 height: 300px; /* Era 400*/
 margin-left: -100%;/* se agrego*/
+position: relative;
+}
+.slider:before{
+    content:"";
+    position: absolute;
+    z-index: 1;
+    top:0;
+    left:0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+    height: 100%;
 }
 .slider-section{
 width:100%;
+position: relative;
 }
 .section-img{
 display:block;
@@ -87,6 +113,7 @@ font-family: monospace;
 text-align: center;
 border-radius: 50%;
 cursor: pointer;
+z-index: 999; /*hace posible que la capa esté por delante de otras*/
 }
 .slider-btn:hover{
     background: #fff;
@@ -100,4 +127,77 @@ cursor: pointer;
     left: 10px;
 
 }
+.slider-content{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translateX(-50%), translateY(-50%);
+    text-align: center;
+    z-index: 999;/*translate(-50%, -50%); forma abreviada*/
+}
+.slider-title{
+    font-size:2.2em;
+    margin:0;
+}
+.slider-text {
+    margin: 5px 0;
+   /* text-align: center;*/
+}
+.slider-section-btn /*slider-link*/ {
+    display: block;
+    border: 1px solid #FF4E00;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    margin: 20px auto;  
+}
 /*end slider*/
+
+/*Estilos de productos*/
+
+.container-products {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+
+}
+.product{
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.product:before{
+    content: "New";
+    background: #FF4E00;
+    padding: 10px;
+    position: absolute;
+    width: 70px;
+    top:10px;
+    left: 10px;
+    right: 10px;
+    transform: rotate(-90deg);
+    color:white;
+
+}
+.product-img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.product-title{
+    text-align: center;
+}
+.product-price{
+    color: #FF4E00;
+    font-weight: bold;
+
+}
+.product-icon {
+    display: block;
+    margin-top: 10px;
+}
+/* final productos*/

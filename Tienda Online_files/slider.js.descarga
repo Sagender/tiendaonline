@@ -1,5 +1,5 @@
-const slider = document.querySelector("#slider");
-let sliderSection = document.querySelectorAll(".slider-section");
+const slider = document.querySelector("slider");
+let sliderSection = documentSelectorAll(".slider-section");
 let sliderSectionLast = sliderSection[sliderSection.length -1];
 
 const btnLeft = document.querySelector("#btn-left");
@@ -18,7 +18,7 @@ function Next(){
 
 }//final de  funcion
 function Prev() {
-    let sliderSection = document.querySelectorAll(".slider-section");
+    let sliderSectionFirst = document.querySelectorAll(".slider-section")[0];
     let sliderSectionLast = sliderSection[sliderSection.length -1];
     slider.style.marginLeft = "0";
     slider.style.transition = "all 0.5s";
@@ -27,14 +27,9 @@ function Prev() {
         slider.insertAdjacentElement('afterbegin', sliderSectionLast);
         slider.style.marginLeft = "-100%";
     }, 500);
-}
-
     btnRight.addEventListener('click', function(){
-        Next();
+        Next():
     });
     btnLeft.addEventListener('click', function () {
-        Prev();
+        Prev():
     });
-    setInterval(function(){
-        Next();
-    },5000);/*codigo para hacer que sea automático*/
