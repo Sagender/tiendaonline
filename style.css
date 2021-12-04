@@ -255,6 +255,19 @@ z-index: 999; /*hace posible que la capa esté por delante de otras*/
 .container-editor{
     margin-top: 20px;
 }
+/*producto*/
+.descripción{
+    display: flexbox;
+    text-align: right;
+    background:#f7f7f7;
+    padding: 20px;
+    margin: 20px 0;
+    height: 200px;
+}
+.descripción-p{
+    color:#f7f7f7;
+}
+
 .editor-item{
     height: 200px;
     position: relative;
